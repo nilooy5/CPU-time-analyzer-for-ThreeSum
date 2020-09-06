@@ -53,8 +53,8 @@ public class StopwatchCPU {
      */
     public static void main(String[] args) throws FileNotFoundException {
 
-        Scanner scanner = new Scanner(new File("src/4K_ints.txt"));
-        int [] tall = new int [4000];
+        Scanner scanner = new Scanner(new File("src/1K_ints.txt"));
+        int [] tall = new int [1000];
         int index = 0;
         while(scanner.hasNextInt())
         {
