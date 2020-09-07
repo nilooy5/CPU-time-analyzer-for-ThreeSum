@@ -35,8 +35,9 @@ public class StopwatchCPU {
         for (int i = 0; i < N; i++)
             for (int j = i+1; j < N; j++)
                 for (int k = j+1; k < N; k++)
-                    if (a[i] + a[j] + a[k] == 0)
-                        cnt++;
+                    for (int l= k+1; l < N; l++)
+                        if (a[i] + a[j] + a[k] + a[l] == 0)
+                            cnt++;
         return cnt;
     }
 
@@ -52,6 +53,8 @@ public class StopwatchCPU {
      * @param args the command-line arguments
      */
     public static void main(String[] args) throws FileNotFoundException {
+        System.out.println("TEST PERFORMED by Munira Tabassum");
+        System.out.println("TEST for FourSum Algorithm");
 
         Scanner scanner = new Scanner(new File("src/1K_ints.txt"));
         int [] tall = new int [1000];
@@ -67,9 +70,8 @@ public class StopwatchCPU {
 
         StopwatchCPU timer = new StopwatchCPU();
         StdOut.println();
-        StdOut.println("Class Assignment 2 by Munira Tabassum ");
 
-        StdOut.println("Total ThreeSums: " + count(tall));
+        StdOut.println("Total FourSums: " + count(tall));
         StdOut.println("Analyzing finished");
 
         double time = timer.elapsedTime();
